@@ -62,6 +62,49 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\Audio\RandomPlayer.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\Audio\UIAudioPlayer.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\Audio\WorldAudioPool.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\Effects\CameraShaker.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\Effects\ImpactManager.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\Effects\LiquidAmmoDisplay.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\Effects\LiquidContainer.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\Effects\TextAmmoDisplay.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\GameDatabase.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\GradientTexture.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\Helpers.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\KeyLockSystem\Key.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\KeyLockSystem\Keychain.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\KeyLockSystem\Lock.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\LevelLayout\LevelLayout.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\LevelLayout\LevelRoom.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\LevelLayout\LevelRoomGroup.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\Minimap\MinimapElement.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\Minimap\MinimapSystem.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\System\AmmoBox.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\System\Controller.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\System\EndCheckpoint.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\System\GameSystem.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\System\PoolSystem.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\System\Projectile.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\System\StartCheckpoint.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\System\Target.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\System\TargetSpawner.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\System\Weapon.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\System\WeaponAnimationEventHandler.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\TriggerActionsSystem\DissolveAction.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\TriggerActionsSystem\EnableObjectAction.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\TriggerActionsSystem\GameAction.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\TriggerActionsSystem\MovingAction.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\TriggerActionsSystem\TargetChecker.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\UI\CreatorKitPauseMenu.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\UI\FinalScoreUI.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\UI\FullscreenMap.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\UI\GameSystemInfo.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\UI\LevelSelectionUI.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\UI\MinimapUI.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\UI\RestartLevel.cs" />
+    <Compile Include="Assets\Creator Kit - FPS\Scripts\UI\WeaponInfoUI.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -70,6 +113,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <None Include="Assets\_Creepy_Cat\_3D Scifi Kit Starter Kit\_Docs\Doc.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.Timeline.Editor">

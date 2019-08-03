@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_GardenBed
-  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _NORMALMAP _SPECGLOSSMAP
+  m_Name: Glass
+  m_Shader: {fileID: 4800000, guid: 963484209d11fd7f110076aa44295342, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 417bc3d1a9424df42a22d97ef2e98c55, type: 3}
+        m_Texture: {fileID: 2800000, guid: e08c295755c0885479ad19f518286ff2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b14a1b04d3cabb045a5c7b0a7fe317d3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9bae725505bdaf5488cd1720e6f829bd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -55,11 +55,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 2800000, guid: 89e3bd193b87a494cbff5180148b739b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _BumpAmt: 9
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -79,4 +76,3 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

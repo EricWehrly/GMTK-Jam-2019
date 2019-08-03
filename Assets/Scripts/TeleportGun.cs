@@ -4,9 +4,10 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class TeleportGun : MonoBehaviour
 {
     private Gradient gradient;
-    private CharacterController m_CharacterController;
+    private RigidbodyFirstPersonController m_CharacterController;
 
     public bool DrawLines = true;
+    public bool ShouldTeleport = true;
 
     private void Awake()
     {
@@ -19,7 +20,7 @@ public class TeleportGun : MonoBehaviour
             new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
         );
         
-        m_CharacterController = GetComponent<CharacterController>();
+        m_CharacterController = GetComponent<RigidbodyFirstPersonController>();
     }
 
     void Update()
@@ -33,11 +34,14 @@ public class TeleportGun : MonoBehaviour
             {
                 DrawLine(this.transform.position, hit.point);
 
-                // TODO: we want to actually step the ray back from the hit point,
-                // as this spawns the player 'closer' to what is hit than where they'd normally collide
-                m_CharacterController.enabled = false;
-                this.transform.position = hit.point;
-                m_CharacterController.enabled = true;
+                if (ShouldTeleport)
+                {
+                    // TODO: we want to actually step the ray back from the hit point,
+                    // as this spawns the player 'closer' to what is hit than where they'd normally collide
+                    m_CharacterController.enabled = false;
+                    this.transform.position = hit.point;
+                    m_CharacterController.enabled = true;
+                }
             }
         }
     }

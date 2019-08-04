@@ -84,7 +84,13 @@ public class TeleportGun : MonoBehaviour
     {
         lastTarget = target;
         target.SetActive(false);
+
+        // we could probably do this in a different thread
         target.tag = "Untagged";
+        if(target.GetComponent<FollowPlayer>() == null)
+        {
+            target.AddComponent<FollowPlayer>();
+        }
     }
 
     private void TeleportTo(Vector3 point)

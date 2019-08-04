@@ -53,7 +53,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 100
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -143,4 +143,6 @@ MonoBehaviour:
   AudioClips:
   - {fileID: 8300000, guid: 2d4f958dbb5271d419d7a3ba17304f85, type: 3}
   - {fileID: 8300000, guid: bcf5cb72f084f884d98e8ac410d68d4b, type: 3}
+  - {fileID: 8300000, guid: f0f1cab658e94994ab04a7ce6feeb509, type: 3}
+  - {fileID: 8300000, guid: e9ca98bcbb2bf5a44a2b1d3b62540721, type: 3}
   SecondsInterval: 5

@@ -9,12 +9,10 @@ public class TeleportGun : MonoBehaviour
     public string TagFilter = null;
     public Material ShadowMaterial;
     public GameObject CreepySounds;
+    public GameObject LastTarget;
 
     private Gradient gradient;
     private RigidbodyFirstPersonController m_CharacterController;
-
-    // TODO: initial 'mesh' for player entering level ...
-    public GameObject lastTarget;
 
     private void Awake()
     {
@@ -28,6 +26,7 @@ public class TeleportGun : MonoBehaviour
         );
 
         m_CharacterController = GetComponent<RigidbodyFirstPersonController>();
+        if (LastTarget != null) StealBody(LastTarget);
     }
 
     void Update()
@@ -64,11 +63,11 @@ public class TeleportGun : MonoBehaviour
 
     private void SpawnShadow()
     {
-        if (lastTarget != null)
+        if (LastTarget != null)
         {
             if (ShadowMaterial != null)
             {
-                SkinnedMeshRenderer shadowRenderer = lastTarget.GetComponentInChildren<SkinnedMeshRenderer>();
+                SkinnedMeshRenderer shadowRenderer = LastTarget.GetComponentInChildren<SkinnedMeshRenderer>();
                 Material[] newMaterials = new Material[shadowRenderer.materials.Length];
                 for (int i = 0; i < newMaterials.Length; i++)
                 {
@@ -77,14 +76,14 @@ public class TeleportGun : MonoBehaviour
                 shadowRenderer.materials = newMaterials;
             }
 
-            lastTarget.gameObject.SetActive(true);
+            LastTarget.gameObject.SetActive(true);
         }
     }
 
     private void StealBody(GameObject target)
     {
-        lastTarget.tag = "Untagged";
-        lastTarget = target;
+        LastTarget.tag = "Untagged";
+        LastTarget = target;
         target.SetActive(false);
 
         // we could probably do this in a different thread

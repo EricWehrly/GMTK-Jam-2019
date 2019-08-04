@@ -5434,7 +5434,7 @@ MonoBehaviour:
   ShadowMaterial: {fileID: 2100000, guid: 6e0a800ea8ee49349a69325dd0e6ed04, type: 2}
   CreepySounds: {fileID: 3188293098404716046, guid: 44c6bbe6a13843445815ed40a1cd291d,
     type: 3}
-  lastTarget: {fileID: 1705683195}
+  LastTarget: {fileID: 1705683195}
 --- !u!4 &1171784069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942,

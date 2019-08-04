@@ -15,6 +15,7 @@ public class FollowPlayer : MonoBehaviour
         // if no character controller, make one?
         target = GameObject.FindWithTag("Player").transform;
         _controller = GetComponent<CharacterController>();
+        if (_controller == null) _controller = transform.gameObject.AddComponent<CharacterController>();
     }
 
     // Update is called once per frame

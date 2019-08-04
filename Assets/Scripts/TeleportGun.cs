@@ -8,12 +8,13 @@ public class TeleportGun : MonoBehaviour
     public bool EnableTeleport = true;
     public string TagFilter = null;
     public Material ShadowMaterial;
+    public GameObject CreepySounds;
 
     private Gradient gradient;
     private RigidbodyFirstPersonController m_CharacterController;
 
     // TODO: initial 'mesh' for player entering level ...
-    private GameObject lastTarget;
+    public GameObject lastTarget;
 
     private void Awake()
     {
@@ -87,9 +88,14 @@ public class TeleportGun : MonoBehaviour
 
         // we could probably do this in a different thread
         target.tag = "Untagged";
-        if(target.GetComponent<FollowPlayer>() == null)
+        if (target.GetComponent<FollowPlayer>() == null)
         {
             target.AddComponent<FollowPlayer>();
+        }
+
+        if (CreepySounds)
+        {
+            Instantiate(CreepySounds).transform.parent = target.transform;
         }
     }
 

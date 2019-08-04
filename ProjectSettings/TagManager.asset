@@ -6,6 +6,7 @@ TagManager:
   tags:
   - KILLBOX
   - Controllable
+  - SoundManager
   layers:
   - Default
   - TransparentFX

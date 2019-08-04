@@ -7,6 +7,7 @@ public class TeleportGun : MonoBehaviour
     public bool EnableDebugLines = true;
     public bool EnableTeleport = true;
     public string TagFilter = null;
+    public Material ShadowMaterial;
 
     private Gradient gradient;
     private RigidbodyFirstPersonController m_CharacterController;
@@ -41,10 +42,7 @@ public class TeleportGun : MonoBehaviour
 
                 if (ShouldTeleport(ref hit))
                 {
-                    if (lastTarget != null)
-                    {
-                        lastTarget.gameObject.SetActive(true);
-                    }
+                    SpawnShadow();
 
                     StealBody(hit.transform.gameObject);
 
@@ -63,10 +61,30 @@ public class TeleportGun : MonoBehaviour
             && EnableTeleport;
     }
 
+    private void SpawnShadow()
+    {
+        if (lastTarget != null)
+        {
+            if (ShadowMaterial != null)
+            {
+                SkinnedMeshRenderer shadowRenderer = lastTarget.GetComponentInChildren<SkinnedMeshRenderer>();
+                Material[] newMaterials = new Material[shadowRenderer.materials.Length];
+                for (int i = 0; i < newMaterials.Length; i++)
+                {
+                    newMaterials[i] = ShadowMaterial;
+                }
+                shadowRenderer.materials = newMaterials;
+            }
+
+            lastTarget.gameObject.SetActive(true);
+        }
+    }
+
     private void StealBody(GameObject target)
     {
         lastTarget = target;
         target.SetActive(false);
+        target.tag = "Untagged";
     }
 
     private void TeleportTo(Vector3 point)

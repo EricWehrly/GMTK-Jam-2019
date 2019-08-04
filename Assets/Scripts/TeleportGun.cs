@@ -11,6 +11,12 @@ public class TeleportGun : MonoBehaviour
     public GameObject CreepySounds;
     public GameObject LastTarget;
 
+    public AudioSource[] TeleportSounds;
+    public AudioSource TeleportSound1;
+    public AudioSource TeleportSound2;
+    public AudioSource TeleportSound3;
+    public AudioSource TeleportSound4;
+
     private Gradient gradient;
     private RigidbodyFirstPersonController m_CharacterController;
 
@@ -27,6 +33,8 @@ public class TeleportGun : MonoBehaviour
 
         m_CharacterController = GetComponent<RigidbodyFirstPersonController>();
         if (LastTarget != null) StealBody(LastTarget);
+
+        TeleportSounds = GetComponents<AudioSource>();
     }
 
     void Update()
@@ -104,6 +112,8 @@ public class TeleportGun : MonoBehaviour
         m_CharacterController.enabled = false;
         this.transform.position = point;
         m_CharacterController.enabled = true;
+
+        TeleportSounds[UnityEngine.Random.Range(0, TeleportSounds.Length)].Play();
     }
 
     private void DrawLine(Vector3 pointOne, Vector3 pointTwo)

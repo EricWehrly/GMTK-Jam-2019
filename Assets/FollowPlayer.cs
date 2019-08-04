@@ -12,9 +12,7 @@ public class FollowPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // if no character controller, make one
-        Debug.Log("Hi");
-
+        // if no character controller, make one?
         target = GameObject.FindWithTag("Player").transform;
         _controller = GetComponent<CharacterController>();
     }

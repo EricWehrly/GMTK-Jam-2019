@@ -83,11 +83,12 @@ public class TeleportGun : MonoBehaviour
 
     private void StealBody(GameObject target)
     {
+        lastTarget.tag = "Untagged";
         lastTarget = target;
         target.SetActive(false);
 
         // we could probably do this in a different thread
-        target.tag = "Untagged";
+        target.tag = "Player";
         if (target.GetComponent<FollowPlayer>() == null)
         {
             target.AddComponent<FollowPlayer>();
